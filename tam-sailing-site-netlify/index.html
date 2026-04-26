@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tam High Sailing team information, practice schedule, race schedule, expectations, resources, and contacts." />
+  <title>Tam High Sailing</title>
+  <style>
+    :root {
+      --navy: #071a33;
+      --blue: #315cff;
+      --sky: #eaf4ff;
+      --red: #e14b45;
+      --sand: #f7f0e2;
+      --ink: #102033;
+      --muted: #64748b;
+      --card: rgba(255,255,255,.92);
+      --line: rgba(15, 31, 51, .12);
+      --shadow: 0 18px 50px rgba(7, 26, 51, .14);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f7fbff 0%, #fff 48%, var(--sand) 100%);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      background: #fff;
+      color: var(--navy);
+      padding: 10px 14px;
+      border-radius: 999px;
+      z-index: 10;
+    }
+    .skip-link:focus { left: 12px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.84);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #111;
+      box-shadow: 0 8px 24px rgba(49,92,255,.20);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 14px;
+      font-weight: 700;
+      color: #27405f;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 9px 11px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: var(--sky);
+      color: var(--blue);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 78vh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(7,26,51,.86) 0%, rgba(7,26,51,.55) 46%, rgba(7,26,51,.16) 100%),
+        linear-gradient(0deg, rgba(7,26,51,.78) 0%, rgba(7,26,51,0) 52%);
+      z-index: 1;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1180px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 88px 22px 78px;
+      color: white;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .hero h1 {
+      margin: 18px 0 14px;
+      max-width: 850px;
+      font-size: clamp(48px, 8vw, 104px);
+      line-height: .92;
+      letter-spacing: -.075em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(18px, 2vw, 24px);
+      color: rgba(255,255,255,.88);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--blue); color: white; box-shadow: 0 14px 32px rgba(49,92,255,.35); }
+    .button.secondary { background: rgba(255,255,255,.16); color: white; border: 1px solid rgba(255,255,255,.28); }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 22px 70px;
+    }
+
+    section { scroll-margin-top: 90px; }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+
+    .section-intro {
+      margin: 0 0 26px;
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 22px;
+      letter-spacing: -.03em;
+    }
+
+    .card p { margin: 0; color: #334155; }
+    .card ul { margin: 10px 0 0; padding-left: 20px; color: #334155; }
+    .card li + li { margin-top: 6px; }
+
+    .mission-card {
+      margin-top: -54px;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .quote-card {
+      background: linear-gradient(135deg, var(--navy), #0c376b 62%, var(--blue));
+      color: white;
+    }
+
+    .quote-card .section-title { color: white; }
+    .quote-card blockquote {
+      margin: 0;
+      font-size: clamp(24px, 3.2vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -.045em;
+      font-weight: 900;
+    }
+
+    .captains-card {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: #fff;
+    }
+
+    .captains-card img {
+      width: 118px;
+      height: 118px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      background: #111;
+    }
+
+    .captains-card .names {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -.035em;
+    }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      margin: 44px 0;
+    }
+
+    .photo-card {
+      min-height: 360px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #dbeafe;
+      position: relative;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    .photo-card.tall { min-height: 520px; }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--sky);
+      color: #16478a;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .schedule-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 16px;
+      border-radius: 18px;
+      background: #f8fbff;
+      border: 1px solid var(--line);
+    }
+
+    .day {
+      color: var(--blue);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 13px;
+    }
+
+    .resources a, .contact a {
+      color: var(--blue);
+      font-weight: 850;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--line);
+      padding: 18px 0;
+    }
+    .faq-item:first-child { border-top: 0; padding-top: 0; }
+    .faq-item strong { display: block; margin-bottom: 6px; color: var(--navy); }
+
+    .footer {
+      background: var(--navy);
+      color: white;
+      margin-top: 30px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 34px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer a { color: white; font-weight: 800; }
+
+    @media (max-width: 880px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { justify-content: flex-start; }
+      .mission-card, .grid.two, .grid.three, .photo-strip { grid-template-columns: 1fr; }
+      .photo-card, .photo-card.tall { min-height: 310px; }
+      .hero { min-height: 72vh; }
+      .schedule-item { grid-template-columns: 1fr; gap: 4px; }
+    }
+
+    @media (max-width: 520px) {
+      .nav-links a { padding: 7px 8px; font-size: 13px; }
+      .hero-content { padding-bottom: 54px; }
+      main { padding-inline: 16px; }
+      .card { padding: 20px; border-radius: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Tam High Sailing home">
+        <img src="images/tam-logo.png" alt="Tam Sailing logo">
+        <span>Tam High Sailing</span>
+      </a>
+      <div class="nav-links">
+        <a href="#mission">Mission</a>
+        <a href="#races">Races</a>
+        <a href="#practice">Practice</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="home" aria-label="Tam High Sailing homepage hero">
+    <img class="hero-image" src="images/team-regatta.png" alt="Tam High Sailing team standing together at a regatta with FJ sailboats behind them">
+    <div class="hero-content">
+      <span class="eyebrow">PCISA NorCal League • FJ Sailing</span>
+      <h1>Tam High Sailing</h1>
+      <p>Training, racing, and team sailing for students learning FJ boat handling, racing strategy, and competition around California.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#practice">View Practice Schedule</a>
+        <a class="button secondary" href="mailto:tamhighsailingofficial@gmail.com">Contact the Team</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="mission-card" id="mission">
+      <div class="card quote-card">
+        <h2 class="section-title">Mission</h2>
+        <blockquote>“To learn basics of FJ boat handling and racing strategy through on the water training, and competitions around the CA.”</blockquote>
+      </div>
+      <div class="card captains-card">
+        <img src="images/tam-logo.png" alt="Tam Sailing logo">
+        <h2 class="section-title">Your Captains</h2>
+        <div class="names">Flynn Rossington<br>and Stewart Walker</div>
+      </div>
+    </section>
+
+    <div class="photo-strip" aria-label="Sailing photo gallery">
+      <div class="photo-card tall">
+        <img src="images/boats-beach.png" alt="FJ sailboats launching from the beach at a regatta">
+      </div>
+      <div class="grid">
+        <div class="photo-card">
+          <img src="images/gg-boat-wide.png" alt="FJ sailboat sailing beneath the Golden Gate Bridge">
+        </div>
+        <div class="photo-card">
+          <img src="images/two-boats-bridge.png" alt="Two FJ sailboats sailing near the Golden Gate Bridge">
+        </div>
+      </div>
+    </div>
+
+    <section id="races" class="card">
+      <h2 class="section-title">Race Schedule</h2>
+      <p class="section-intro">Through Tam, we are registered as a club, but we function as a varsity sport and compete in the PCISA NorCal League.</p>
+      <div class="grid three">
+        <div class="card">
+          <h3>Travel Regattas</h3>
+          <ul>
+            <li>Long Beach</li>
+            <li>LA</li>
+            <li>Santa Barbara</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Local Regattas</h3>
+          <ul>
+            <li>Encinal Yacht Club</li>
+            <li>Richmond Yacht Club</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Championships</h3>
+          <ul>
+            <li>NorCal Champs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="expectations" style="margin-top: 44px;" class="grid two">
+      <div class="card">
+        <h2 class="section-title">Team Expectations</h2>
+        <p>Attend practice with an enthusiasm to learn and sail.</p>
+        <div class="badge-row" aria-label="Team expectations">
+          <span class="badge">Learn</span>
+          <span class="badge">Sail</span>
+          <span class="badge">Compete</span>
+          <span class="badge">Support the team</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Gear Required</h2>
+        <ul>
+          <li>Closed-toed shoes</li>
+          <li>Life jacket</li>
+          <li>Wetsuit or full spray gear</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="practice" style="margin-top: 44px;" class="grid two">
+      <div class="card">
+        <h2 class="section-title">Practice Schedule</h2>
+        <p class="section-intro">Sailing practice runs in both the fall and spring seasons.</p>
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <div class="day">Monday</div>
+            <div>Tam and Marin Catholic JV practice</div>
+          </div>
+          <div class="schedule-item">
+            <div class="day">Wednesday</div>
+            <div>Tam JV &amp; Varsity practice</div>
+          </div>
+          <div class="schedule-item">
+            <div class="day">Thursday</div>
+            <div>Tam Varsity practice</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Location</h2>
+        <h3>Sausalito Yacht Club</h3>
+        <p>100 Humboldt Ave, Sausalito, CA 94965</p>
+        <div class="photo-card" style="margin-top: 18px; min-height: 300px;">
+          <img src="images/gg-boat-close.png" alt="FJ sailboat sailing near the Golden Gate Bridge">
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" style="margin-top: 44px;" class="card resources">
+      <h2 class="section-title">Extra Sailing Resources</h2>
+      <p class="section-intro">Use these resources to study rules, scores, and sailing strategy.</p>
+      <div class="grid three">
+        <div class="card">
+          <h3>Rule Book</h3>
+          <p><a href="#" aria-label="Rule Book link placeholder">Add rule book link</a></p>
+        </div>
+        <div class="card">
+          <h3>Regatta Scores</h3>
+          <p><a href="#" aria-label="Regatta Scores link placeholder">Add regatta scores link</a></p>
+        </div>
+        <div class="card">
+          <h3>Sailing Study Info</h3>
+          <p><a href="#" aria-label="Sailing Study Info link placeholder">Add study info link</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top: 44px;" class="grid two contact">
+      <div class="card">
+        <h2 class="section-title">Contacts</h2>
+        <p>Email: <a href="mailto:tamhighsailingofficial@gmail.com">tamhighsailingofficial@gmail.com</a></p>
+      </div>
+      <div class="card">
+        <h2 class="section-title">TeamSnap</h2>
+        <p>All internal communications happen through Tam &amp; MC Sailing TeamSnap. Contact the Gmail or a captain to be added.</p>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top: 44px;" class="card">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-item">
+        <strong>Where is the best parking?</strong>
+        <p>At the Spinnaker nearby there is free parking, or you can apply for a Sausalito commuter card for discounted rates.</p>
+      </div>
+      <div class="faq-item">
+        <strong>What is the best ice cream spot for after practice?</strong>
+        <p>Lappert’s Ice Cream!!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>Tam High Sailing</strong><br>PCISA NorCal League • Sausalito Yacht Club</div>
+      <a href="mailto:tamhighsailingofficial@gmail.com">tamhighsailingofficial@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
