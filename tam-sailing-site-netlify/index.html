@@ -279,14 +279,26 @@
 
     .captains-card {
       display: flex;
-      place-items: center;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       background: #fff;
       gap: 20px;
     }
 
+    .captains-card .row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+    }
+
     .captains-card .column {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 15px;
       background-color: #f0f0f0;
       font-size: 24px;
@@ -463,14 +475,15 @@
       <div class="card captains-card">
 
         <h2 class="section-title">Your Captains</h2>
-        
-        <div class="column">
-          <img src="images/tam-logo.png" alt="Flynn Rossington">
-          <p>Flynn Rossington</p>
-        </div>
-        <div class="column">
-          <img src="images/tam-logo.png" alt="Stewart Walker">
-          <p>Stewart Walker</p>
+        <div class="row">
+          <div class="column">
+            <img src="images/tam-logo.png" alt="Flynn Rossington">
+            <p>Flynn Rossington</p>
+          </div>
+          <div class="column">
+            <img src="images/tam-logo.png" alt="Stewart Walker">
+            <p>Stewart Walker</p>
+          </div>
         </div>
         
       </div>
