@@ -53,7 +53,7 @@ img {
 }
 
 .nav {
-  max-width: 1180px;
+  /*max-width: 1180px;*/
   margin: 0 auto;
   padding: 12px 22px;
   display: flex;
@@ -121,8 +121,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(7,26,51,.86) 0%, rgba(7,26,51,.55) 46%, rgba(7,26,51,.16) 100%),
-    linear-gradient(0deg, rgba(7,26,51,.78) 0%, rgba(7,26,51,0) 52%);
+    linear-gradient(90deg, rgba(7,26,51,.60) 0%, rgba(7,26,51,.35) 46%, rgba(7,26,51,.10) 100%),
+    linear-gradient(0deg, rgba(7,26,51,.55) 0%, rgba(7,26,51,0) 52%);
   z-index: 1;
 }
 
@@ -132,17 +132,24 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 85%;
+  object-position: center 65%;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1180px;
+  /*max-width: 1180px;*/
   width: 100%;
   margin: 0 auto;
-  padding: 88px 22px 78px;
+  padding: 88px 22px 40px;
   color: white;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .eyebrow {
@@ -161,7 +168,7 @@ img {
 
 .hero h1 {
   margin: 18px 0 14px;
-  max-width: 850px;
+  max-width: 1100px;
   font-size: clamp(48px, 8vw, 104px);
   line-height: .92;
   letter-spacing: -.035em;
@@ -172,13 +179,6 @@ img {
   max-width: 720px;
   font-size: clamp(18px, 2vw, 24px);
   color: rgba(255,255,255,.88);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
 }
 
 /* Smaller hero used on interior pages */
@@ -202,12 +202,28 @@ img {
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
+.button.ghost-blue {
+  background: rgba(49,92,255,.28);
+  border: 1px solid rgba(49,92,255,.4);
+  color: white;
+  min-height: 0;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.button.ghost-blue:hover {
+  background: rgba(49,92,255,.28);
+}
+
 .button:hover { transform: translateY(-2px); }
 .button.primary { background: var(--blue); color: white; box-shadow: 0 14px 32px rgba(49,92,255,.35); }
 .button.secondary { background: rgba(255,255,255,.16); color: white; border: 1px solid rgba(255,255,255,.28); }
 
 main {
-  max-width: 1180px;
+  /*max-width: 1180px;*/
   margin: 0 auto;
   padding: 34px 22px 70px;
 }
@@ -257,31 +273,14 @@ section { scroll-margin-top: 90px; }
 .card ul { margin: 10px 0 0; padding-left: 20px; color: #334155; }
 .card li + li { margin-top: 6px; }
 
-.mission-card {
-  margin-top: -54px;
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 18px;
-  align-items: stretch;
+.about-row.grid {
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: start;
+  min-width: 0;
 }
 
-/* Standalone (non-overlapping) version of the mission card for its own page */
-.mission-card.standalone { margin-top: 0; }
-
-.quote-card {
-  background: linear-gradient(135deg, var(--navy), #0c376b 62%, var(--blue));
-  color: white;
-}
-
-.quote-card .section-title { color: white; }
-.quote-card blockquote {
-  margin: 0;
-  font-size: clamp(24px, 3.2vw, 42px);
-  line-height: 1.1;
-  letter-spacing: -.015em;
-  font-weight: 400;
+.about-row > div:first-child {
+  padding: 4px 4px 0;
 }
 
 .captains-card {
@@ -291,6 +290,12 @@ section { scroll-margin-top: 90px; }
   text-align: center;
   background: #fff;
   gap: 20px;
+  min-width: max-content;
+  max-width: 100%;
+}
+
+.captains-card .section-title {
+  margin-bottom: 0;
 }
 
 .captains-card .row {
@@ -308,6 +313,14 @@ section { scroll-margin-top: 90px; }
   justify-content: center;
   padding: 15px;
   background-color: #f0f0f0;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--navy);
+  letter-spacing: -.035em;
+  min-width: fit-content;
+}
+
+.captains-card .column .h3 {
   font-size: 24px;
   font-weight: 900;
   color: var(--navy);
@@ -321,6 +334,21 @@ section { scroll-margin-top: 90px; }
   border-radius: 50%;
   margin-bottom: 16px;
   background: #111;
+}
+
+.quote-card {
+  background: linear-gradient(135deg, var(--navy), #0c376b 62%, var(--blue));
+  color: white;
+  margin-top: 24px;
+}
+
+.quote-card .section-title { color: white; }
+.quote-card blockquote {
+  margin: 0;
+  font-size: clamp(24px, 3.2vw, 42px);
+  line-height: 1.1;
+  letter-spacing: 0em;
+  font-weight: 400;
 }
 
 .photo-strip {
@@ -412,7 +440,7 @@ section { scroll-margin-top: 90px; }
 }
 
 .footer-inner {
-  max-width: 1180px;
+  /*max-width: 1180px;*/
   margin: 0 auto;
   padding: 34px 22px;
   display: flex;
@@ -425,7 +453,7 @@ section { scroll-margin-top: 90px; }
 .footer a { color: white; font-weight: 800; }
 
 @media (max-width: 880px) {
-  .mission-card, .grid.two, .grid.three, .photo-strip { grid-template-columns: 1fr; }
+  .grid.two, .grid.three, .photo-strip { grid-template-columns: 1fr; }
   .photo-card, .photo-card.tall { min-height: 310px; }
   .hero { min-height: clamp(360px, 50vh, 560px); }
   .schedule-item { grid-template-columns: 1fr; gap: 4px; }
