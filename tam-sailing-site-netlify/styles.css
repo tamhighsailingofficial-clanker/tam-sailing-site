@@ -162,7 +162,7 @@ img {
   max-width: 850px;
   font-size: clamp(48px, 8vw, 104px);
   line-height: .92;
-  letter-spacing: -.055em;
+  letter-spacing: -.035em;
 }
 
 .hero p {
@@ -278,8 +278,8 @@ section { scroll-margin-top: 90px; }
   margin: 0;
   font-size: clamp(24px, 3.2vw, 42px);
   line-height: 1.1;
-  letter-spacing: -.045em;
-  font-weight: 900;
+  letter-spacing: -.035em;
+  font-weight: 400;
 }
 
 .captains-card {
