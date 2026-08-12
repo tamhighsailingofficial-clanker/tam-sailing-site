@@ -278,13 +278,24 @@
     }
 
     .captains-card {
-      display: grid;
+      display: flex;
       place-items: center;
       text-align: center;
       background: #fff;
+      gap: 20px;
     }
 
-    .captains-card img {
+    .captains-card .column {
+      flex: 1;
+      padding: 15px;
+      background-color: #f0f0f0;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -.035em;
+    }
+    
+    .captains-card .column img {
       width: 118px;
       height: 118px;
       object-fit: cover;
@@ -292,14 +303,7 @@
       margin-bottom: 16px;
       background: #111;
     }
-
-    .captains-card .names {
-      font-size: 24px;
-      font-weight: 900;
-      color: var(--navy);
-      letter-spacing: -.035em;
-    }
-
+    
     .photo-strip {
       display: grid;
       grid-template-columns: 1.15fr .85fr;
@@ -457,9 +461,18 @@
         <blockquote>“To learn basics of FJ boat handling and racing strategy through on the water training, and competitions around the CA.”</blockquote>
       </div>
       <div class="card captains-card">
-        <img src="images/tam-logo.png" alt="Tam Sailing logo">
+
         <h2 class="section-title">Your Captains</h2>
-        <div class="names">Flynn Rossington<br>Stewart Walker</div>
+        
+        <div class="column">
+          <img src="images/tam-logo.png" alt="Flynn Rossington">
+          <p>Flynn Rossington</p>
+        </div>
+        <div class="column">
+          <img src="images/tam-logo.png" alt="Stewart Walker">
+          <p>Stewart Walker</p>
+        </div>
+        
       </div>
     </section>
 
