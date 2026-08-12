@@ -162,7 +162,7 @@ img {
   max-width: 850px;
   font-size: clamp(48px, 8vw, 104px);
   line-height: .92;
-  letter-spacing: -.075em;
+  letter-spacing: -.055em;
 }
 
 .hero p {
