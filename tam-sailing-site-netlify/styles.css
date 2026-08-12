@@ -60,6 +60,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -91,6 +92,7 @@ img {
   font-size: 14px;
   font-weight: 700;
   color: #27405f;
+  min-width: max-content;
 }
 
 .nav-links a {
@@ -107,7 +109,7 @@ img {
 
 .hero {
   position: relative;
-  min-height: 78vh;
+  min-height: clamp(420px,60vh,720px);
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -251,7 +253,7 @@ section { scroll-margin-top: 90px; }
   letter-spacing: -.03em;
 }
 
-.card p { margin: 0; color: #334155; }
+.card p:not(.section-intro) { margin: 0; color: #334155; }
 .card ul { margin: 10px 0 0; padding-left: 20px; color: #334155; }
 .card li + li { margin-top: 6px; }
 
@@ -278,7 +280,7 @@ section { scroll-margin-top: 90px; }
   margin: 0;
   font-size: clamp(24px, 3.2vw, 42px);
   line-height: 1.1;
-  letter-spacing: -.035em;
+  letter-spacing: -.015em;
   font-weight: 400;
 }
 
@@ -423,11 +425,9 @@ section { scroll-margin-top: 90px; }
 .footer a { color: white; font-weight: 800; }
 
 @media (max-width: 880px) {
-  .nav { align-items: flex-start; flex-direction: column; }
-  .nav-links { justify-content: flex-start; }
   .mission-card, .grid.two, .grid.three, .photo-strip { grid-template-columns: 1fr; }
   .photo-card, .photo-card.tall { min-height: 310px; }
-  .hero { min-height: 72vh; }
+  .hero { min-height: clamp(360px, 50vh, 560px); }
   .schedule-item { grid-template-columns: 1fr; gap: 4px; }
 }
 
