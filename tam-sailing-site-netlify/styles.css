@@ -403,7 +403,7 @@ main section.card + .grid {
   display: grid;
   grid-template-columns: 1.15fr .85fr;
   gap: 18px;
-  margin-top: 44px;
+  margin-top: 22px;
 }
 
 .photo-card {
