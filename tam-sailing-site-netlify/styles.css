@@ -1,20 +1,8 @@
-/* ============================================================
-   Tam High Sailing — visual identity
-   Palette pulled from racing signal flags, bay water, and hull
-   paint rather than a generic "trustworthy blue" default.
-   Display type is a condensed grotesk (flag-lettering / dock
-   signage feel). Data — times, dates, distances — runs in mono,
-   like numbers stenciled on a bow or a start sequence clock.
-   Signature move: a pennant-notch clip-path used consistently
-   on buttons, tags, and labels instead of pill shapes.
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
 
 :root {
-  /* Color: named for what they are, not what they suggest */
-  --canvas: #f5f1e8;        /* sail canvas / deck cream */
-  --navy: #0e2338;          /* hull navy — headers, footer */
+  --canvas: #f5f1e8;        /* sail canvas / cream */
+  --navy: #0e2338;          /* navy — headers, footer */
   --bay: #1f5c82;           /* bay water blue — primary */
   --bay-dim: #e7eff3;       /* pale water tint for surfaces */
   --signal-red: #bf3b26;    /* racing-flag red — accent / CTA */
@@ -214,7 +202,7 @@ img {
 }
 
 /* Smaller hero used on interior pages */
-.page-hero {
+.hero.plain-hero {
   min-height: 0;
   padding: 0;
   background: var(--navy);
@@ -316,7 +304,7 @@ section { scroll-margin-top: 90px; }
 .card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-top: 3px solid var(--navy);
+  border-top: 3px solid var(--bay);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 24px;
@@ -457,7 +445,6 @@ main section.card + .grid {
   border-left: 3px solid var(--bay);
 }
 
-/* Day marker reads like a bow number / start-sequence stamp */
 .day {
   display: inline-block;
   color: var(--navy);
@@ -512,6 +499,7 @@ main section.card + .grid {
   left: 0;
   width: 100%;
   height: 4px;
+  /*transform: translateY(-4px);*/
   background-image: linear-gradient(
     90deg,
     var(--signal-red) 0 10px, transparent 10px 13px,
@@ -543,10 +531,10 @@ main section.card + .grid {
     var(--signal-red) 210px 214px, transparent 214px 217px,
     var(--signal-red) 217px 221px, transparent 221px 229px,
 
-    var(--signal-red) 229px 239px
+    var(--signal-red) 229px 244px, transparent 244px 252px
   );
   background-repeat: repeat-x;
-  background-size: 239px 4px;
+  background-size: 252px 4px;
 }
 
 .footer-inner {
