@@ -172,15 +172,18 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 20px 8px 14px;
-  background: var(--signal-red);
+  padding: 8px 12px;
+  background: rgb(from var(--signal-red) r g b / 0.80);
+  border: 1px solid var(--signal-red);
+  margin: 12px 0;
   color: white;
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: .08em;
-  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  border-radius: 999px;
 }
 
 .hero h1 {
