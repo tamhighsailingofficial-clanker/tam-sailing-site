@@ -291,7 +291,6 @@ section { scroll-margin-top: 90px; }
 
 .section-intro {
   margin: 0 0 26px;
-  max-width: 780px;
   color: var(--muted);
   font-size: 17px;
 }
@@ -307,7 +306,7 @@ section { scroll-margin-top: 90px; }
 .card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-top: 3px solid var(--bay);
+  border-top: 3px solid var(--teak);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 24px;
@@ -338,7 +337,7 @@ main section.card + .grid {
 .about-row {
   display: grid;
   gap: 18px;
-  grid-template-columns: minmax(0, 1fr) 420px;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   min-width: 0;
 }
@@ -361,14 +360,14 @@ main section.card + .grid {
 }
 
 .captains-card .row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   width: 100%;
   gap: 20px;
 }
 
 .captains-card .column {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -380,11 +379,10 @@ main section.card + .grid {
   font-size: 18px;
   font-weight: 500;
   color: var(--navy);
-  min-width: 0;
 }
 
 .captains-card .column .name {
-  margin: 0 0 4px;
+  margin: 0;
   font-family: var(--font-display);
   font-size: 21px;
   font-weight: 700;
