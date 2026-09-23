@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Oswald:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
 :root {
   --canvas: #f5f1e8;        /* sail canvas / cream */
   --navy: #0e2338;          /* navy — headers, footer */
@@ -19,6 +18,7 @@
   --font-display: 'Oswald', 'Arial Narrow', sans-serif;
   --font-body: 'Public Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-thin: 'Montserrat', 'Arial Narrow', sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -39,18 +39,25 @@ img {
   display: block;
   max-width: 100%;
 }
-
+/*
 .skip-link {
-  position: absolute;
-  left: -999px;
-  top: 12px;
-  background: #fff;
-  color: var(--navy);
+  align-items: center;
+  z-index: 1000;
+  opacity: 0.5;
+  color: #fff;
+  font-family: var(--font-thin);
+  font-weight: 700;
   padding: 10px 14px;
   border-radius: 4px;
-  z-index: 10;
+  text-decoration: none;
+  width: 50%;
+  margin: 0 auto; 
 }
-.skip-link:focus { left: 12px; }
+.skip-link:hover,
+.skip-link:focus {
+  opacity: 1;
+}
+*/
 
 /* ---------- header ---------- */
 
@@ -131,6 +138,8 @@ img {
   overflow: hidden;
   background: var(--navy);
 }
+
+.hero.home-hero { min-height: clamp(480px, 70vh, 800px); }
 
 .hero::after {
   content: "";
