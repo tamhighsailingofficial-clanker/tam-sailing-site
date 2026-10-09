@@ -7,6 +7,7 @@
   <title>Tam High Sailing</title>
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -15,7 +16,11 @@
         <img src="images/tam-logo.png" alt="Tam High Sailing logo">
         <span>Tam High Sailing</span>
       </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       <div class="nav-links">
+        <a href="roster.html">Roster</a>
         <a href="regattas.html">Regattas</a>
         <a href="practice.html">Practice</a>
         <a href="resources.html">Resources</a>
@@ -36,29 +41,12 @@
   </section>
 
   <main id="main" tabindex="-1">
-    <section class="about-row" id="about">
-      <div class="about-us">
-        <h2 class="section-title">About Us</h2>
-        <div>
-          <p>Tam High is part of the PCISA NorCal League and sails FJs (Flying Juniors) out of Sausalito Yacht Club. We practice with sailors from Marin Catholic and San Marin for a combined total of 24 participants in an average season.</p> 
-          <p>To participate, sailors must pay a fee and register via Clubspot. Team members are selected by the coach. Prior sailing experience is highly recommended, but not required; however, due to facility limitations students with experience may be given priority.</p>
-          <p>Practices are Mondays & Wednesdays from 4:00-7:00pm in September and October. We compete against other PCISA schools at weekend regattas, which are optional but highly encouraged.</p>
-        </div>
-      </div>
-      <div class="card captains-card">
-        <h2 class="section-title">Your Captains</h2>
-        <div class="row">
-          <div class="card column">
-            <img src="images/captain_1.jpg" alt="Flynn Rossington">
-            <h4 class="name">Flynn Rossington</h4>
-            <p>Senior</p>
-          </div>
-          <div class="card column">
-            <img src="images/captain_2.jpg" alt="Stewart Walker">
-            <h4 class="name">Stewart Walker</h4>
-            <p>Senior</p>
-          </div>
-        </div>
+    <section class="about-us" id="about">
+      <h2 class="section-title">About Us</h2>
+      <div class="text">
+        <p>Tam High is part of the PCISA NorCal League and sails FJs (Flying Juniors) out of Sausalito Yacht Club. We practice with sailors from Marin Catholic and San Marin for a combined total of 24 participants in an average season.</p> 
+        <p>To participate, sailors must pay a fee and register via Clubspot. Team members are selected by the coach. Prior sailing experience is highly recommended, but not required; however, due to facility limitations students with experience may be given priority.</p>
+        <p>Practices are Mondays & Wednesdays from 4:00-7:00pm in September and October. We compete against other PCISA schools at weekend regattas, which are optional but highly encouraged.</p>
       </div>
     </section>
 
@@ -66,7 +54,7 @@
       <div class="photo-card tall">
         <img src="images/Sailing & cargo ship.png" alt="FJ sailboats launching from the beach at a regatta">
       </div>
-      <div class="grid">
+      <div class="grid one">
         <div class="photo-card">
           <img src="images/gg-boat-wide.jpg" alt="FJ sailboat sailing beneath the Golden Gate Bridge">
         </div>

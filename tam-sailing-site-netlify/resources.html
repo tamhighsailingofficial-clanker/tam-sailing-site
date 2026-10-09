@@ -7,6 +7,7 @@
   <title>Resources | Tam Sailing</title>
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -15,7 +16,11 @@
         <img src="images/tam-logo.png" alt="Tam Sailing logo">
         <span>Tam High Sailing</span>
       </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       <div class="nav-links">
+        <a href="roster.html">Roster</a>
         <a href="regattas.html">Regattas</a>
         <a href="practice.html">Practice</a>
         <a href="resources.html" aria-current="page">Resources</a>
@@ -33,27 +38,27 @@
   </section>
 
   <main id="main">
-    <section id="resources" class="card resources">
-      <h2 class="section-title">Extra Sailing Resources</h2>
-      <p class="section-intro"></p>
-      <div class="grid three">
-        <a class="button primary" href="https://hssailing.org/documents/2025-2028-ISSA-Procedure-Rules.pdf" target="_blank" rel="noopener noreferrer">ISSA Rule Book</a>
-        <a class="button primary" href="https://scores.hssailing.org" target="_blank" rel="noopener noreferrer">View Regatta Scores (PCISA)</a>
-        <a class="button primary" href="https://www.animatedknots.com/boating-knots" target="_blank" rel="noopener noreferrer">Learn Sailing Knots!</a>
-        <a class="button primary" href="https://sail1design.com/wp-content/uploads/2014/08/FJTuningGuide.pdf" target="_blank" rel="noopener noreferrer">FJ Rig Tuning Guide</a>
-        <a class="button primary" href="https://docs.google.com/document/d/12IxCF-NfzNh8xARn5Y1Bj42ahy94LT6nyEKSRZFECx8/edit?usp=share_link" target="_blank" rel="noopener noreferrer">Sailing Tips Doc</a>
+    <section class="grid two">
+      <div class="card">
+        <h2 class="section-title">Extra Sailing Resources</h2>
+        <div class="grid one">
+          <a class="button primary" href="https://hssailing.org/documents/2025-2028-ISSA-Procedure-Rules.pdf" target="_blank" rel="noopener noreferrer">ISSA Rule Book</a>
+          <a class="button primary" href="https://scores.hssailing.org" target="_blank" rel="noopener noreferrer">View Regatta Scores (PCISA)</a>
+          <a class="button primary" href="https://www.animatedknots.com/boating-knots" target="_blank" rel="noopener noreferrer">Learn Sailing Knots!</a>
+          <a class="button primary" href="https://sail1design.com/wp-content/uploads/2014/08/FJTuningGuide.pdf" target="_blank" rel="noopener noreferrer">FJ Rig Tuning Guide</a>
+          <a class="button primary" href="https://docs.google.com/document/d/12IxCF-NfzNh8xARn5Y1Bj42ahy94LT6nyEKSRZFECx8/edit?usp=share_link" target="_blank" rel="noopener noreferrer">Sailing Tips Doc</a>
+        </div>
       </div>
-    </section>
 
-    <section id="instructor" class="card resources">
-      <h2 class="section-title">Instructor Resources</h2>
-      <p class="section-intro"></p>
-      <div class="grid three">
-        <a class="button primary" href="https://uscenterforsafesport.myabsorb.com/#/public-dashboard" target="_blank" rel="noopener noreferrer">SafeSport</a>
-        <a class="button primary" href="https://www.firsttack.org/my-account/certs" target="_blank" rel="noopener noreferrer">First Tack (Online Education)</a>
-        <a class="button primary" href="https://courses.boatus.org/course/id/BTUS100S" target="_blank" rel="noopener noreferrer">CA Boater Card</a>
-        <a class="button primary" href="https://www1.ussailing.org/constituents/MyUSSailing.aspx" target="_blank" rel="noopener noreferrer">My US Sailing Account</a>
-        <a class="button primary" href="https://westcoastsailing.net/fj-resources?srsltid=AfmBOoo7T5D55m-XbMpPaAB-JQaB_BObZiQ8tpPqTINHuUtson5weo1J" target="_blank" rel="noopener noreferrer">FJ Rig Resources</a>
+      <div class="card">
+        <h2 class="section-title">Instructor Resources</h2>
+        <div class="grid one">
+          <a class="button primary" href="https://uscenterforsafesport.myabsorb.com/#/public-dashboard" target="_blank" rel="noopener noreferrer">SafeSport</a>
+          <a class="button primary" href="https://www.firsttack.org/my-account/certs" target="_blank" rel="noopener noreferrer">First Tack (Online Education)</a>
+          <a class="button primary" href="https://courses.boatus.org/course/id/BTUS100S" target="_blank" rel="noopener noreferrer">CA Boater Card</a>
+          <a class="button primary" href="https://www1.ussailing.org/constituents/MyUSSailing.aspx" target="_blank" rel="noopener noreferrer">My US Sailing Account</a>
+          <a class="button primary" href="https://westcoastsailing.net/fj-resources?srsltid=AfmBOoo7T5D55m-XbMpPaAB-JQaB_BObZiQ8tpPqTINHuUtson5weo1J" target="_blank" rel="noopener noreferrer">FJ Rig Resources</a>
+        </div>
       </div>
     </section>
   </main>
