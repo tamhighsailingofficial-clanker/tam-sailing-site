@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
+  <script src="sheet-config.js" defer></script>
+  <script src="sheets.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -16,10 +18,10 @@
         <img src="images/tam-logo.png" alt="Tam Sailing logo">
         <span>Tam High Sailing</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="roster.html" aria-current="page">Roster</a>
         <a href="regattas.html">Regattas</a>
         <a href="practice.html">Practice</a>
@@ -38,50 +40,10 @@
   </section>
 
   <main id="main">
-    <section id="roster" class="grid one">
-      <div class="grid">
-        <div class="card tile">
-          <img src="images/captain_1.jpg" alt="Flynn Rossington">
-          <h4 class="name">Flynn Rossington</h4>
-          <p><strong>Captain</strong></p>
-          <p>Senior</p>
-        </div>
-        <div class="card tile">
-          <img src="images/captain_2.jpg" alt="Stewart Walker">
-          <h4 class="name">Stewart Walker</h4>
-          <p><strong>Captain</strong></p>
-          <p>Senior</p>
-        </div>
-      </div>
-      <div class="grid">
-          <div class="tile">
-              <h2>Seniors</h2>
-              <p>Aidan Andresen</p>
-              <p>Daphne Yurch</p>
-              <p>Gideon Palestrant</p>
-              <p>Vaugn Neumann</p>
-          </div>
-          <div class="tile">
-              <h2>Juniors</h2>
-              <p>Ethan Shaffer</p>
-              <p>John Donahue</p>
-              <p>Zealand Lie</p>
-          </div>
-          <div class="tile">
-              <h2>Sophomores</h2>
-              <p>Clark Collman</p>
-              <p>Ozzy Bloomquist</p>
-          </div>
-          <div class="tile">
-              <h2>Freshmen</h2>
-              <p>Archer</p>
-              <p>Arlo</p>
-              <p>Kellen</p>
-              <p>Matthew Frost</p>
-              <p>Olive Anderson</p>
-              <p>Rava Avalos</p>
-          </div>
-      </div>
+    <section id="roster" class="grid one" data-sheet="roster">
+      <h2 class="section-title text">Team Captains</h2>
+      <div class="grid" data-slot="captains"></div>
+      <div class="grid" data-slot="classes"></div>
     </section>
   </main>
 

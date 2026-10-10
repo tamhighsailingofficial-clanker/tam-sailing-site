@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
+  <script src="sheet-config.js" defer></script>
+  <script src="sheets.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -16,10 +18,10 @@
         <img src="images/tam-logo.png" alt="Tam Sailing logo">
         <span>Tam High Sailing</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="roster.html">Roster</a>
         <a href="regattas.html" aria-current="page">Regattas</a>
         <a href="practice.html">Practice</a>
@@ -34,15 +36,17 @@
     <img class="hero-image" src="images/sea-otter-regatta-2025.png" alt="Boats by the beach at the Sea Otter Regatta, 2025">
     <div class="hero-content">
       <a class="button transparent" href="https://scores.hssailing.org" target="_blank" rel="noopener noreferrer">View Regatta Scores</a>
-      <h1>Race Schedule</h1>
+      <h1>Regattas</h1>
     </div>
   </section>
 
   <main id="main">
-    <section id="regattas" class="card">
-      <h2 class="section-title">Regattas</h2>
-      <p class="section-intro">Tamalpais High School competes in the PCISA NorCal League, racing against other Bay Area schools at regional events and schools from around California at statewide events.
-      <br>Regatta registration fees are typically covered by the program, but travel fees are paid by the sailor.</p>
+    <section id="regattas">
+      <div class="text">
+        <h2>Regattas</h2>
+        <p>Tamalpais High School competes in the PCISA NorCal League, racing against other Bay Area schools at regional events and schools from around California at statewide events.</p>
+        <p>Regatta registration fees are typically covered by the program, but travel fees are paid by the sailor.</p>
+      </div>
       <div class="grid three">
         <div class="card">
           <h3>Travel Regattas</h3>
@@ -70,72 +74,9 @@
 
     <section id="schedule" class="card">
       <h2 class="section-title">Upcoming Regattas</h2>
-      <span class="eyebrow">Fall Schedule 2026</span>
+      <span class="eyebrow" data-season hidden></span>
 
-      <div class="grid one">
-        <!---
-        <div class="schedule-item">
-          <div class="day">Sep 26&ndash;27</div>
-          <div>
-            <strong>NorCal #1 &amp; #2</strong>
-            <p>Richmond Yacht Club</p>
-            <p>
-            <a href="https://go.teamsnap.com/8946975/schedule/view_game/369876900">Sat, Sep 26, 2026</a><br>
-            <a href="https://go.teamsnap.com/8946975/schedule/view_game/369876905">Sun, Sep 27, 2026</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="schedule-item">
-          <div class="day">Oct 3&ndash;4</div>
-          <div>
-            <strong>Sea Otter</strong>
-            <p>Monterey Peninsula Yacht Club</p>
-            <p>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369876922">Sat, Oct 03, 2026</a><br>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369876931">Sun, Oct 04, 2026</a>
-            </p>
-          </div>
-        </div>
-        -->
-
-        <div class="schedule-item">
-          <div class="day">Oct 31&ndash;Nov 1</div>
-          <div>
-            <strong>NorCal #3 &amp; #4</strong>
-            <p>Encinal Yacht Club</p>
-            <p>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369877174">Sat, Oct 31, 2026</a><br>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369877182">Sun, Nov 01, 2026</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="schedule-item">
-        <div class="day">Nov 7&ndash;8</div>
-          <div>
-            <strong>Anteater</strong>
-            <p>Newport Harbor Yacht Club</p>
-            <p>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369877194">Sat, Nov 07, 2026</a><br>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369877203">Sun, Nov 08, 2026</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="schedule-item">
-        <div class="day">Jan 2&ndash;3</div>
-          <div>
-            <strong>Rose Bowl</strong>
-            <p>US Sailing Center Long Beach</p>
-            <p>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369877240">Sat, Jan 02, 2027</a><br>
-              <a href="https://go.teamsnap.com/8946975/schedule/view_game/369877250">Sun, Jan 03, 2027</a>
-            </p>
-          </div>
-        </div>
-
-      </div>
+      <div class="grid one" data-sheet="regattas"></div>
     </section>
   </main>
 

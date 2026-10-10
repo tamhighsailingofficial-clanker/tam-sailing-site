@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
+  <script src="sheet-config.js" defer></script>
+  <script src="sheets.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -16,10 +18,10 @@
         <img src="images/tam-logo.png" alt="Tam Sailing logo">
         <span>Tam High Sailing</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="roster.html">Roster</a>
         <a href="regattas.html">Regattas</a>
         <a href="practice.html">Practice</a>
@@ -38,32 +40,7 @@
   </section>
 
   <main id="main">
-    <section id="faq" class="card">
-      <div class="faq-item">
-        <strong>Where can I park?</strong>
-        <p>There are two nearby paid parking lots, metered street parking, and limited free parkingat the Spinnaker. Please do not park in the SYC parking lot.</p>
-      </div>
-      <div class="faq-item">
-        <strong>Do I need prior sailing experience to sign up?</strong>
-        <p>Basic sailing skills are strongly recommended. Summer programs at SYC and other yacht clubs offer introductory FJ classes.</p>
-      </div>
-      <div class="faq-item">
-        <strong>How can I / my child get involved?</strong>
-        <p>Sign up via the clubspot link on the homepage (while registration is open) or feel free to reach out via our email/Instagram (found under "<a href="contact.html">Contact Us</a>")!</p>
-      </div>
-      <div class="faq-item">
-        <strong>What gear should I bring to practice?</strong>
-        <p>Required: closed-toed shoes, life jacket, wetsuit or full spray gear, helmet<br>Optional: gloves, sunglasses</p>
-      </div>
-      <div class="faq-item">
-        <strong>Are sailors required to attend regattas?</strong>
-        <p>Regattas are not mandatory, but sailors are expected to put effort into the team.</p>
-      </div>
-      <div class="faq-item">
-        <strong>What is the best ice cream spot for after practice?</strong>
-        <p>Lappert&rsquo;s Ice Cream!!</p>
-      </div>
-    </section>
+    <section id="faq" class="card" data-sheet="faq"></section>
     <p>Still have questions? <a href="contact.html">Contact us</a>.</p>
   </main>
 

@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
   <script src="nav.js" defer></script>
+  <script src="sheet-config.js" defer></script>
+  <script src="sheets.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -16,10 +18,10 @@
         <img src="images/tam-logo.png" alt="Tam Sailing logo">
         <span>Tam High Sailing</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="roster.html">Roster</a>
         <a href="regattas.html">Regattas</a>
         <a href="practice.html" aria-current="page">Practice</a>
@@ -38,12 +40,10 @@
   </section>
 
   <main id="main">
-    <div id="expectations">
+    <div id="expectations" class="text">
       <h2 class="section-title">Expectations</h2>
-      <div class="text">
-        <p>Sailors are expected to attend the majority of practices and with an enthusiasm to learn and sail.</p>
-        <p>Upon arrival, sailors should begin rigging their boats and getting dressed afterwards. In order to maximize our limited time on water, this should be done as fast as possible.</p>
-      </div>
+      <p>Sailors are expected to attend the majority of practices and with an enthusiasm to learn and sail.</p>
+      <p>Upon arrival, sailors should begin rigging their boats and getting dressed afterwards. In order to maximize our limited time on water, this should be done as fast as possible.</p>
     </div>
 
     <div class="card">
@@ -74,17 +74,8 @@
     <div class="grid two">
       <div class="card">
         <h2 class="section-title">Practice Schedule</h2>
-        <span class="eyebrow">Fall + Spring</span>
-        <div class="grid one">
-          <div class="schedule-item">
-            <div class="day">Monday</div>
-            <div>4:00pm &ndash; 7:00pm</div>
-          </div>
-          <div class="schedule-item">
-            <div class="day">Wednesday</div>
-            <div>3:45pm &ndash; 7:00pm</div>
-          </div>
-        </div>
+        <span class="eyebrow" data-season hidden></span>
+        <div class="grid one" data-sheet="practice"></div>
       </div>
 
       <div class="card">
