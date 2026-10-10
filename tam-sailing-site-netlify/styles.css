@@ -7,8 +7,6 @@
   --signal-red: #bf3b26;    /* racing-flag red — accent / CTA */
   --flag-gold: #cf9a2e;     /* course-flag gold — secondary accent */
   --teak: #8a6b4f;          /* teak trim — warm neutral */
-  --ink: #16232f;
-  --muted: #5b6b78;
   --card: #ffffff;
   --line: rgba(14, 35, 56, .14);
   --line-strong: rgba(14, 35, 56, .28);
@@ -27,7 +25,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--ink);
+  color: var(--navy);
   background: var(--canvas);
   line-height: 1.55;
 }
@@ -44,6 +42,7 @@ img {
 p { 
   margin: 0;
   font-size: 17px;
+  color: var(--navy);
 }
 
 /* page title */
@@ -60,7 +59,7 @@ h1 {
 
 /* section title */
 h2 { 
-  margin-top: 0; 
+  margin: 0 0 24px; 
   font-family: var(--font-display);
   font-weight: 700;
   text-transform: uppercase;
@@ -78,6 +77,12 @@ h3 {
   letter-spacing: .02em;
   color: var(--navy);
   font-size: 19px;
+}
+
+ul { 
+  margin: 0; 
+  padding-left: 20px; 
+  color: var(--navy); 
 }
 
 /* ---------- header ---------- */
@@ -202,7 +207,7 @@ h3 {
   padding: 8px 12px;
   background: rgb(from var(--signal-red) r g b / 0.80);
   border: 1px solid var(--signal-red);
-  margin: 12px 0;
+  margin: 10px 0 24px;
   color: white;
   font-family: var(--font-mono);
   font-size: 12px;
@@ -278,7 +283,10 @@ main {
   padding: 4px 4px 0;
 }
 
-section { scroll-margin-top: 90px; }
+section { 
+  scroll-margin-top: 90px; 
+  gap:24px;
+}
 
 .section-title {
   margin: 0 0 18px;
@@ -311,9 +319,6 @@ section { scroll-margin-top: 90px; }
 }
 
 .grid .card { margin: 0; }
-
-.card p { color: #34495e; }
-.card ul { margin: 10px 0 0; padding-left: 20px; color: #34495e; }
 .card li + li { margin-top: 6px; }
 
 /* ---------- about / roster tiles ---------- */
@@ -323,7 +328,7 @@ section { scroll-margin-top: 90px; }
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 16px;
+  padding: 24px;
   background-color: var(--canvas);
   border-radius: 6px;
   font-family: var(--font-body);

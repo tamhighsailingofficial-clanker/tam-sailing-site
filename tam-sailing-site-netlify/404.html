@@ -5,30 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
-    <script src="nav.js" defer></script>
+    <script src="site.js" defer></script>
     <title>Page Not Found - 404</title>
   </head>
   
   <body>
-    <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="index.html" aria-label="Tam High Sailing home">
-          <img src="images/tam-logo.png" alt="Tam High Sailing logo">
-          <span>Tam High Sailing</span>
-        </a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links">
-          <a href="roster.html">Roster</a>
-          <a href="regattas.html">Regattas</a>
-          <a href="practice.html">Practice</a>
-          <a href="resources.html">Resources</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-      </nav>
-    </header>
+    <header class="site-header" data-include="/partials/nav.html"></header>
 
     <main id="main">
       <section>
@@ -41,15 +23,6 @@
       </section>
     </main>
 
-    <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <strong>&copy; 2026 Tam High Sailing. All rights reserved.
-        <br>Coded by Reid Imwalle, Flynn Rossington</strong>
-        <br>PCISA NorCal League &bull; Sausalito Yacht Club
-      </div>
-      <a href="mailto:tamhighsailingofficial@gmail.com">tamhighsailingofficial@gmail.com</a>
-    </div>
-  </footer>
+    <footer class="footer" data-include="/partials/footer.html"></footer>
   </body>
 </html>

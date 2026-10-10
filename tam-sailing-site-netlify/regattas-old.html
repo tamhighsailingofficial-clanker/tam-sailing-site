@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tam High Sailing race schedule: travel regattas, local regattas, and championships." />
+  <title>Races | Tam Sailing</title>
+  <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="nav.js" defer></script>
+  <script src="sheet-config.js" defer></script>
+  <script src="sheets.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Tam High Sailing home">
+        <img src="images/tam-logo.png" alt="Tam Sailing logo">
+        <span>Tam High Sailing</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="roster.html">Roster</a>
+        <a href="regattas.html" aria-current="page">Regattas</a>
+        <a href="practice.html">Practice</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Race schedule page header">
+    <img class="hero-image" src="images/sea-otter-regatta-2025.png" alt="Boats by the beach at the Sea Otter Regatta, 2025">
+    <div class="hero-content">
+      <a class="button transparent" href="https://scores.hssailing.org" target="_blank" rel="noopener noreferrer">View Regatta Scores</a>
+      <h1>Regattas</h1>
+    </div>
+  </section>
+
+  <main id="main">
+    <div class="text">
+      <h2 class="section-title">Regattas</h2>
+      <p>Tamalpais High School competes in the PCISA NorCal League, racing against other Bay Area schools at regional events and schools from around California at statewide events.</p>
+      <p>Regatta registration fees are typically covered by the program, but travel fees are paid by the sailor.</p>
+    </div>
+    
+    <div class="grid three">
+      <div class="card">
+        <h3>Travel Regattas</h3>
+        <ul>
+          <li>Anteater - Newport Harbor Yacht Club (LA)</li>
+          <li>Rose Bowl - US Sailing Center Long Beach (LA)</li>
+          <li>Sea Otter - Monterey Peninsula Yacht Club</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Local Regattas</h3>
+        <ul>
+          <li>Encinal Yacht Club</li>
+          <li>Richmond Yacht Club</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Championships</h3>
+        <ul>
+          <li>NorCal Divisional Championships</li>
+        </ul>
+      </div>
+    </div>
+    
+    <section id="schedule" class="card">
+      <h2 class="section-title">Upcoming Regattas</h2>
+      <span class="eyebrow" data-season hidden></span>
+
+      <div class="grid one" data-sheet="regattas"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>&copy; 2026 Tam High Sailing. All rights reserved.
+        <br>Coded by Reid Imwalle, Flynn Rossington</strong>
+        <br>PCISA NorCal League &bull; Sausalito Yacht Club
+      </div>
+      <a href="mailto:tamhighsailingofficial@gmail.com">tamhighsailingofficial@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>

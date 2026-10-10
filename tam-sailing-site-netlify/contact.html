@@ -7,28 +7,10 @@
   <title>Contact Us | Tam Sailing</title>
   <link rel="icon" type="image/x-icon" href="images/tam-logo-mini.png">
   <link rel="stylesheet" href="styles.css">
-  <script src="nav.js" defer></script>
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="index.html" aria-label="Tam High Sailing home">
-        <img src="images/tam-logo.png" alt="Tam Sailing logo">
-        <span>Tam High Sailing</span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      <div class="nav-links">
-        <a href="roster.html">Roster</a>
-        <a href="regattas.html">Regattas</a>
-        <a href="practice.html">Practice</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html" aria-current="page">Contact Us</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-    </nav>
-  </header>
+  <header class="site-header" data-include="/partials/nav.html"></header>
 
   <section class="hero" aria-label="Contact page header">
     <img class="hero-image" src="images/ferry-sunset.jpg" alt="Ferry sunset over the water">
@@ -61,15 +43,6 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <strong>&copy; 2026 Tam High Sailing. All rights reserved.
-        <br>Coded by Reid Imwalle, Flynn Rossington</strong>
-        <br>PCISA NorCal League &bull; Sausalito Yacht Club
-      </div>
-      <a href="mailto:tamhighsailingofficial@gmail.com">tamhighsailingofficial@gmail.com</a>
-    </div>
-  </footer>
+  <footer class="footer" data-include="/partials/footer.html"></footer>
 </body>
 </html>
