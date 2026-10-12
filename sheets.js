@@ -142,9 +142,9 @@ const render = {
     for (const r of rows) {
       for (const [cls, cell] of Object.entries(r)) {
         if (!cell) continue;
-        const m = cell.match(/^(.*?)\s*\(([^)]*)\)$/);
+        const m = cell.match(/^(.*?)\s*\{([^}]*)\}$/);
         const [role = '', photo] = m ? m[2].split(',').map(x => x.trim()) : [];
-        if (/captain/i.test(role)) leaders.push({ name: m[1], role, photo, cls });
+        if (role) leaders.push({ name: m[1], role, photo, cls });
         else (groups[cls] ||= []).push(cell);
       }
     }

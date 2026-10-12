@@ -356,6 +356,10 @@ section {
   background: var(--navy);
 }
 
+.captains .tile {
+  justify-content: center;
+}
+
 /* ---------- photo strip ---------- */
 
 .photo-strip {
@@ -509,6 +513,19 @@ section {
   text-underline-offset: 3px;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-icon {
+  width: 25px;
+  height: auto;
+  object-fit: cover;
+}
+
 /* ---------- responsive ---------- */
 
 .nav-toggle { display: none; }
@@ -539,7 +556,7 @@ section {
     transition: transform .2s ease, opacity .2s ease;
   }
 
-  /* optional: morph into an X when open */
+  /* menu becomes x */
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle span:nth-child(2) { transition: opacity .06s ease .14s; }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; transition-delay: 0s; }
@@ -571,6 +588,7 @@ section {
     visibility: visible;
     pointer-events: auto;
     transition: opacity .18s ease, transform .18s ease, visibility 0s;
+    text-align: right;
   }
 
   .nav-links a {
